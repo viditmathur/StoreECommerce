@@ -59,7 +59,7 @@
 						Products in Cart : <%=cart.getTotalProducts()%></span><br> <span
 						class="productLabelText">Total Amount : <%=cart.getTotalAmount()%></span><br>
 				</div>
-				<button type="submit" value="Confirm"></button>
+				<button type="submit">Confirm</button>
 			</form>
 		</div>
 

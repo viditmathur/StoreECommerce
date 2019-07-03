@@ -43,7 +43,7 @@ public class login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(true);
-		int userId = 0;
+		String userId = (String) request.getAttribute("UserId");
 		String Password = null;
 		Connection con = null;
 		ResultSet rs = null;
@@ -52,11 +52,11 @@ public class login extends HttpServlet {
 			Statement stmt;
 			try {
 				stmt = con.createStatement();
-				String query5 = "Select* from User where Id='" + request.getAttribute("UserId") + "';";
+				String query5 = "Select* from [Auth] where Id='" + userId + "';";
 				rs = stmt.executeQuery(query5);
 				while (rs.next()) {
-					userId=rs.getInt("Id");
-					Password = rs.getString("Password");
+					userId=rs.getString("Id").toString();
+					Password=rs.getString("Password").toString();
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -64,7 +64,7 @@ public class login extends HttpServlet {
 			}
 			
 		}
-		if(request.getAttribute("Password").toString().equals(Password)) {
+		if(Password.equals(request.getAttribute("Password").toString())) {
 			session.setAttribute("UserId", userId);
 			response.sendRedirect("Welcome.jsp");
 

@@ -47,7 +47,7 @@
 			<input type="text" name="Name" value="<%=user.getName() %>"><br>
 			<input type="text" name="Address" value="<%=user.getAddress()%>"><br>
 			<input type="text" name="ContactNumber" value="<%=user.getMobileNumber()%>"><br>
-			<button type="submit" value="Place Order"></button>
+			<button type="submit">Place Order</button>
 			</form>
 			</div>
 			<%

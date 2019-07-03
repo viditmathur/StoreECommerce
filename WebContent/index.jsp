@@ -9,8 +9,13 @@
 <title>Home Page</title>
 </head>
 <body>
+<div class="indexLeftColumn">
+<span>Login</span><br>
 <form action="login" method="post">
-<button type= "submit" value="lets go" ></button>
+<input type="text" name="UserId"><br>
+<input type="password" name="Password"><br>
+<button type= "submit" >lets go </button>
 </form>
+</div>
 </body>
 </html>

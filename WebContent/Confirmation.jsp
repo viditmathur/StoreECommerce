@@ -45,7 +45,7 @@
 			<input type="text" name="Name" value="<%=user.getName() %>"><br>
 			<input type="text" name="Address" value="<%=user.getAddress()%>"><br>
 			<input type="text" name="ContactNumber" value="<%=user.getMobileNumber()%>"><br>
-			<a href ="Welcome.jsp"><button value="Continue Shopping"></button></a>
+			<a href ="Welcome.jsp"><button>Continue Shopping</button></a>
 		</div>
 			<%
 			
